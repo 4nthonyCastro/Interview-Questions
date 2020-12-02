@@ -4,14 +4,9 @@
 #     Each 'task', has a list of objectives to complete.
 #     Create a function to pass in a 'task', sort the 'task' respected objectives (values), and print the output.
 #
-
-myTask = {
-    "A" : [],
-    "B" : ["A", "B"],
-    "C" : ["C", "A", "B"],
-    "D" : ["A"],
-    "E" : ["B", "D", "A"],
-}
+# Note: 
+#     Included an output file of the expected output for this question. 
+#     Create and write to output file is not required to answer this question. 
 
 def sortTask(task, myTask):
     myArr = []
@@ -23,6 +18,14 @@ def sortTask(task, myTask):
         tempArr.sort()
     print (tempArr)
     return tempArr
+
+myTask = {
+    "A" : [],
+    "B" : ["A", "B"],
+    "C" : ["C", "A", "B"],
+    "D" : ["A"],
+    "E" : ["B", "D", "A"],
+}
 
 
 outputList = sortTask('A', myTask)
