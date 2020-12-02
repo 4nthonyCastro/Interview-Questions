@@ -17,7 +17,7 @@ def sortTask(task, myTask):
     for x in myArr:
         tempArr.append(x)
         tempArr.sort()
-    # print (tempArr)   *** Printing from Output File ***
+
     return tempArr
 
 # Task and objectives to be sorted
@@ -29,8 +29,14 @@ myTask = {
     "E" : ["B", "D", "A"],
 }
 
+# Prints original list to compare with our sorted list
+print("\nOriginal Unsorted List")
+for key, value in myTask.items():
+    print (value)
+
 # Produces and sets sorted task objectives to an output array
 outputList = []
+print("\nModified Sorted List")
 outputList.append(sortTask('A', myTask))
 outputList.append(sortTask('B', myTask))
 outputList.append(sortTask('C', myTask))
