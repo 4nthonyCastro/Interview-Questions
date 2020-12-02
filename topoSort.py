@@ -9,7 +9,7 @@
 # ===============================================================================
 # Notes:
 #     - Could easily sort and print the key's values in the sortTask-function 
-#       voluntarily implemented an alternative method for practising purposes 
+#       voluntarily implemented an alternative method for practicing purposes 
 #
 #     - This will pass a dictionary into a function, sorth the values of each 
 #       key, and output the results to a txt file  
