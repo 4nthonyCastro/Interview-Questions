@@ -8,7 +8,7 @@
 #     - Create and write to output file was not originally required to answer this question 
 # ===========================================
 
-# Solution to Interview Question
+#   Solution to Interview Question
 def sortTask(task, myTask):
     myArr = []
     tempArr = []
@@ -17,10 +17,9 @@ def sortTask(task, myTask):
     for x in myArr:
         tempArr.append(x)
         tempArr.sort()
-
     return tempArr
 
-# Task and objectives to be sorted
+#   Dictionary named myTask, to be sorted 
 myTask = {
     "A" : [],
     "B" : ["A", "B"],
@@ -29,12 +28,13 @@ myTask = {
     "E" : ["B", "D", "A"],
 }
 
-# Prints original list to compare with our sorted list
+#   Prints original list to compare with our sorted list
 print("\nOriginal Unsorted List")
 for key, value in myTask.items():
     print (value)
 
-# Produces and sets sorted task objectives to an output array
+#   Calls function sortTask to sort 
+#   Sets sorted myTask values to outputList for write
 outputList = []
 print("\nModified Sorted List")
 outputList.append(sortTask('A', myTask))
@@ -43,7 +43,7 @@ outputList.append(sortTask('C', myTask))
 outputList.append(sortTask('D', myTask))
 outputList.append(sortTask('E', myTask))
 
-# Produces output file for write and iterates through outputList
+#   Opens Output file for write by iterating through outputList
 with open("output.txt", "w") as outputFile: 
     for x in outputList:
         if outputList[0:]:
@@ -52,7 +52,7 @@ with open("output.txt", "w") as outputFile:
             outputFile.write("%s" % x)
 outputFile.close()
 
-# Opens and reads output file with expected values 
+#   Reads Output file
 readFile = open("output.txt", "r") 
 expectedOutput = readFile.read()
 expectedOutput = expectedOutput[:-1]
