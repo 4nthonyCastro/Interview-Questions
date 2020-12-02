@@ -1,24 +1,26 @@
-# [Interview Question - December 2nd, 2020]
-#
-# Objective: 
-#     Each 'task', has a list of objectives to complete.
-#     Create a function to pass in a 'task', sort the 'task' respected objectives (values), and print the output.
-#
-# Note: 
-#     Included an output file of the expected output for this question. 
-#     Create and write to output file is not required to answer this question. 
+# ===========================================
+# Interview Question --- December 2nd, 2020
+# ===========================================
+# Objective:
+#     - Create a function to pass in a 'task', sort the 'task' respected objectives (values), and print the output.
+# ===========================================
+# Note:
+#     - Create and write to output file was not originally required to answer this question 
+# ===========================================
 
+# Solution to Interview Question
 def sortTask(task, myTask):
     myArr = []
     tempArr = []
     myArr = myTask.get(task)
 
     for x in myArr:
-        tempArr.extend(x)
+        tempArr.append(x)
         tempArr.sort()
-    print (tempArr)
+    # print (tempArr)   *** Printing from Output File ***
     return tempArr
 
+# Task and objectives to be sorted
 myTask = {
     "A" : [],
     "B" : ["A", "B"],
@@ -27,18 +29,27 @@ myTask = {
     "E" : ["B", "D", "A"],
 }
 
-
-outputList = sortTask('A', myTask)
+# Produces and sets sorted task objectives to an output array
+outputList = []
+outputList.append(sortTask('A', myTask))
 outputList.append(sortTask('B', myTask))
 outputList.append(sortTask('C', myTask))
 outputList.append(sortTask('D', myTask))
 outputList.append(sortTask('E', myTask))
 
-
+# Produces output file for write and iterates through outputList
 with open("output.txt", "w") as outputFile: 
     for x in outputList:
-        outputFile.write("%s\n" % x)
-
-# outputFile = open("output.txt", "r")
-# print(outputFile.read())
+        if outputList[0:]:
+            outputFile.write("%s\n" % x)
+        else:
+            outputFile.write("%s" % x)
 outputFile.close()
+
+# Opens and reads output file with expected values 
+readFile = open("output.txt", "r") 
+expectedOutput = readFile.read()
+expectedOutput = expectedOutput[:-1]
+print(expectedOutput)
+readFile.close()
+
