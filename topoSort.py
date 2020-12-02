@@ -1,12 +1,22 @@
-# ===========================================
-# Interview Question --- December 2nd, 2020
-# ===========================================
+# ===============================================================================
+# Title:  --- Interview Question - CE, Automation Specialist 
+# Author: --- Anthony Castro
+# Date:   --- December 2nd, 2020
+# ===============================================================================
 # Objective:
-#     - Create a function to pass in a 'task', sort the 'task' respected objectives (values), and print the output.
-# ===========================================
-# Note:
-#     - Create and write to output file was not originally required to answer this question 
-# ===========================================
+#     - Create a function to pass in a 'task', sort the 'task' respected 
+#       objectives (values), and print the expected output
+# ===============================================================================
+# Notes:
+#     - Could easily sort and print the key's values in the sortTask-function 
+#       voluntarily implemented an alternative method for practising purposes 
+#
+#     - This will pass a dictionary into a function, sorth the values of each 
+#       key, and output the results to a txt file  
+#
+#     - Create and write to output file were not required by the original question 
+# ================================================================================
+
 
 #   Solution to Interview Question
 def sortTask(task, myTask):
